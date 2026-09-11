@@ -1,0 +1,29 @@
+package method;
+import java.util.Scanner;
+
+public class Primess {
+
+    public static boolean isPrime(int num){
+        for(int i = 2; i<= num/2; i++){
+            if(num % i == 0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void printPrimes(int limit){
+        for(int i = 2; i<= limit; i++){
+            if(isPrime(i)){
+                System.out.println(i);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int limit = sc.nextInt();
+        printPrimes(limit);
+        sc.close();
+    }
+}
